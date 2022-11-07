@@ -23,7 +23,6 @@ eventgen_wsgi.conf
 *.xml
 !tests/large/splunk/input.xml
 !splunk_eventgen/splunk_app/default/data/ui/nav/default.xml
-dist
 _book
 *.result
 venv/*
