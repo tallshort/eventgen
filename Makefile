@@ -25,6 +25,10 @@ image: setup_eventgen egg
 	rm splunk_eventgen/default/eventgen_engine.conf || true
 	docker build -f dockerfiles/Dockerfile . -t eventgen
 
+image_with_existing_dist: setup_eventgen
+	rm splunk_eventgen/default/eventgen_engine.conf || true
+	docker build -f dockerfiles/Dockerfile . -t eventgen
+
 test: image test_helper run_tests test_collection_cleanup
 
 test_helper:
